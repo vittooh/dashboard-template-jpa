@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  db:
+    image: mdillon/postgis:11-alpine
+    environment:
+      POSTGRES_DB: "sales"
+      POSTGRES_USER: "dashboard"
+      POSTGRES_PASSWORD: "dashboard"
+    ports:
+      - "5432:5432"
