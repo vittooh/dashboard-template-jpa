@@ -6,7 +6,7 @@ create table if not exists sale (
     create_date timestamp,
     update_at timestamp,
     amount_sale float8 not null,
-    saled_at timestamp,
+    saled_at date,
     sales_man_id int8,
     primary key (id)
 );
