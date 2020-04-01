@@ -9,3 +9,5 @@ services:
       POSTGRES_PASSWORD: "dashboard"
     ports:
       - "5432:5432"
+    volumes:
+      - ./src/main/resources/db/init.sql:/docker-entrypoint-initdb.d/init.sql

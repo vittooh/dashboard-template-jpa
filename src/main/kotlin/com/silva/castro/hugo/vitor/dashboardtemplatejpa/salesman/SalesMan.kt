@@ -1,4 +1,4 @@
-package com.silva.castro.hugo.vitor.dashboardtemplatejpa
+package com.silva.castro.hugo.vitor.dashboardtemplatejpa.salesman
 
 import com.silva.castro.hugo.vitor.dashboardtemplatejpa.baseEntity.BaseEntity
 import javax.persistence.Entity
