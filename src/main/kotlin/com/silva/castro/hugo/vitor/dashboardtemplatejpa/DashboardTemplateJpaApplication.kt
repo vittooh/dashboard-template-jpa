@@ -1,6 +1,7 @@
 package com.silva.castro.hugo.vitor.dashboardtemplatejpa
 
 import com.silva.castro.hugo.vitor.dashboardtemplatejpa.baseEntity.dashboard.SalesByWeekRepository
+import com.silva.castro.hugo.vitor.dashboardtemplatejpa.baseEntity.dashboard.SalesByWeekServiceRep
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.SpringApplication
@@ -14,12 +15,17 @@ class DashboardTemplateJpaApplication : CommandLineRunner {
     @Autowired
     lateinit var salesByWeekRepository: SalesByWeekRepository
 
+    @Autowired
+    lateinit var salesByWeekServiceRep: SalesByWeekServiceRep
+
     override fun run(vararg args: String?) {
-        salesByWeekRepository.getByWeek(
+        val batat = salesByWeekServiceRep.getData(
                 mutableListOf(1, 2, 3),
                 LocalDate.of(2020, 3, 29),
                 LocalDate.of(2020, 4, 4)
         )
+
+        println(batat)
     }
 }
 
